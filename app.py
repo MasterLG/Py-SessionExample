@@ -10,7 +10,7 @@ Session(app)
 notes = []
 
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
         note = request.form.get("note")
